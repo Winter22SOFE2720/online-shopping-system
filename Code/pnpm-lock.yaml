@@ -3,8 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@astrojs/react': ^0.1.0
   '@astrojs/svelte': ^0.0.2
-  '@fluentui/web-components': ^2.3.1
-  astro: ^1.0.0-beta.0
+  astro: ^1.0.0-beta.2
   astro-icon: ^0.6.1
   autoprefixer: ^10.4.4
   fluent-svelte: ^1.5.1
@@ -17,7 +16,6 @@ specifiers:
   tailwindcss: ^3.0.23
 
 dependencies:
-  '@fluentui/web-components': 2.3.1
   fluent-svelte: 1.5.1
   react: 18.0.0
   react-dom: 18.0.0_react@18.0.0
@@ -26,7 +24,7 @@ dependencies:
 devDependencies:
   '@astrojs/react': 0.1.0_react-dom@18.0.0+react@18.0.0
   '@astrojs/svelte': 0.0.2_30d940240e61212db3dedb8cdacfdcdb
-  astro: 1.0.0-beta.0_sass@1.49.11
+  astro: 1.0.0-beta.2_sass@1.49.11
   astro-icon: 0.6.1
   autoprefixer: 10.4.4_postcss@8.4.12
   node-sass: 7.0.1
@@ -400,16 +398,6 @@ packages:
     resolution: {integrity: sha512-8HqW8EVqjnCmWXVpqAOZf+EGESdkR27odcMMMGefgKXtar00SoYNSryGv//TELI4T3QFsECo78p+0lmalk/CFA==}
     dev: true
 
-  /@fluentui/web-components/2.3.1:
-    resolution: {integrity: sha512-E+QNUbYBBpxVI0a3F5PTAqoMF++PZVm4W8c1Np/ddet+fHnL6sKfWCFfhXhOC4n8IsBeqdT8+Agza8d7eIJ3rw==}
-    dependencies:
-      '@microsoft/fast-colors': 5.2.0
-      '@microsoft/fast-element': 1.8.0
-      '@microsoft/fast-foundation': 2.40.0
-      '@microsoft/fast-web-utilities': 5.2.0
-      tslib: 1.14.1
-    dev: false
-
   /@gar/promisify/1.1.3:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
     dev: true
@@ -433,29 +421,6 @@ packages:
   /@ljharb/has-package-exports-patterns/0.0.1:
     resolution: {integrity: sha512-J4HxcjHI8EzVwXj2HKfZrwnWv4wmOhGxSHyxDQLhiL4ibwRoIkYBqsacZUXFUWQzJtW6QC+FKSNy8HqKjkEqaQ==}
     dev: true
-
-  /@microsoft/fast-colors/5.2.0:
-    resolution: {integrity: sha512-EAGkf8xnBGHCV5ICKXZCuIn9uzC1pnnfrnMsgg0rJD7y2OXFr1CzP7niL1UG9XfPvZYh//IQgMAP71qdJYr2Ug==}
-    dev: false
-
-  /@microsoft/fast-element/1.8.0:
-    resolution: {integrity: sha512-92GhkCYcay+vcI2yE+P1yD+v59u8Thprmaqg9PgTstf8jLOrevW/6Hna76tMioQQOFtZ8wm2NiiMHD/4sjrfhQ==}
-    dev: false
-
-  /@microsoft/fast-foundation/2.40.0:
-    resolution: {integrity: sha512-9P9GLxAcRDqGq83AmBL2ZHaiOPGBwsFHtWqzZYq4WO3RWmuXncGA4wN/DkJjx5OPpJl7FC9Z+yJus/2uiRTyFQ==}
-    dependencies:
-      '@microsoft/fast-element': 1.8.0
-      '@microsoft/fast-web-utilities': 5.2.0
-      tabbable: 5.2.1
-      tslib: 1.14.1
-    dev: false
-
-  /@microsoft/fast-web-utilities/5.2.0:
-    resolution: {integrity: sha512-Ri5FR4MotdAPKeFLo/yhZu6/xMVo/H9OXcGaC/qiQo+U0zY8cLPCViGmHYYgxpCYviS4VpgqPL5dslTE6wg9Yg==}
-    dependencies:
-      exenv-es6: 1.1.1
-    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -842,8 +807,8 @@ packages:
       svgo: 2.8.0
     dev: true
 
-  /astro/1.0.0-beta.0_sass@1.49.11:
-    resolution: {integrity: sha512-6gcWoC7ZOwfuU7/nX1FV6YgYK0SVS0GQlsXCYlovqdwi8d0jqmw2W+2wpo7o1b9rYw45NpXGluwOiTXQIEqgGw==}
+  /astro/1.0.0-beta.2_sass@1.49.11:
+    resolution: {integrity: sha512-qnSGQzswnhBwvX0VttcpLi1BWblLBvqH6xhd63hDTTaZrrVuizdVPKre+Rw0585ndRA6pwFBL8MUC42vbJVPbQ==}
     engines: {node: ^14.15.0 || >=16.0.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -2057,10 +2022,6 @@ packages:
       signal-exit: 3.0.7
       strip-final-newline: 3.0.0
     dev: true
-
-  /exenv-es6/1.1.1:
-    resolution: {integrity: sha512-vlVu3N8d6yEMpMsEm+7sUBAI81aqYYuEvfK0jNqmdb/OPXzzH7QWDDnVjMvDSY47JdHEqx/dfC/q8WkfoTmpGQ==}
-    dev: false
 
   /extend-shallow/2.0.1:
     resolution: {integrity: sha1-Ua99YUrZqfYQ6huvu5idaxxWiQ8=}
@@ -5136,10 +5097,6 @@ packages:
       strip-bom: 4.0.0
       type-fest: 0.13.1
     dev: true
-
-  /tslib/1.14.1:
-    resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
-    dev: false
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
