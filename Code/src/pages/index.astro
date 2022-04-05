@@ -2,7 +2,9 @@
 // Style Imports
 import '../styles/global.css';
 import '../styles/home.css';
+
 // Component Imports
+import Navigation from "../components/Navigation.svelte";
 import ShoppingCart from "../components/ShoppingCart.svelte";
 
 // Component Script:
@@ -21,13 +23,29 @@ let title = 'My Astro Site';
 	<title>{title}</title>
 
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	
+	<style lang="scss">
+		@import "../../node_modules/fluent-svelte/theme.css";
+		:global(body) {
+			background-color: var(--fds-solid-background-base);
+			color: var(--fds-text-primary);
+		}
+
+		main {
+			@apply grid h-full;
+			grid-template-columns: 1fr 2fr 325px;
+		}
+	</style>
 </head>
 <body>
-	<div class="w-[325px]">
-		<ShoppingCart />
-
-	</div>
 	<main>
+		<div>
+			<Navigation client:load />
+		</div>
+		<div></div>
+		<div class="overflow-scroll h-full">
+			<ShoppingCart client:load />
+		</div>
 
 		<!--
 
