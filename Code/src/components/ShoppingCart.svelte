@@ -3,7 +3,6 @@
 	import { ListItem } from "fluent-svelte";
 
     import ShoppingCartItem from "./ShoppingCartItem.svelte";
-	// import { fluentToolbar, fluentButton, fluentAnchor, provideFluentDesignSystem } from "@fluentui/web-components";
 </script>
 
 <ul>
