@@ -17,6 +17,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x, 17.x]
+        pnpm-version: [6.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -37,6 +38,7 @@ jobs:
 
     - uses: pnpm/action-setup@v2.1.0
       with:
+        version: ${{ matrix.pnpm-version }}
         run_install: true
         
     - run: pnpm test:run
