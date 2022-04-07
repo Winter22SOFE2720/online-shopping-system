@@ -16,9 +16,10 @@ jobs:
 
     strategy:
       matrix:
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
         node-version: [16.x, 17.x]
         pnpm-version: [6.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        
 
     steps:
     - uses: actions/checkout@v3
@@ -30,10 +31,15 @@ jobs:
         key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
           ${{ runner.os }}-
+
+    - uses: pnpm/action-setup@v2.1.0
+      with:
+        version: 6.32.4
+        run_install: true
           
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: pnpm i && pnpm test:run
+    - run: pnpm test:run
