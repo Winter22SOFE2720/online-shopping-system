@@ -1,5 +1,11 @@
 import Product from "./Product";
 
+/**
+ * Represents a shopping cart where shoppers can add/remove items from cart, and get a list of all products in cart.
+ * 
+ * @author Okiki Ojo
+ * @date April 5, 2022
+ */
 export class ShoppingCart {
     private products = new Set<Product>();
     constructor() { }

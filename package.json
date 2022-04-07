@@ -1,0 +1,29 @@
+{
+  "name": "online-shopping-system",
+  "version": "1.0.0",
+  "description": "A simple online shopping system built using fluent-svelte.\r This project was made to practice common software engineering practices such as requirements engineering and architecure design.",
+  "main": "index.js",
+  "packageManager": "pnpm@6.32.4",
+  "scripts": {
+    "dev": "pnpm run dev --filter code",
+    "start": "pnpm dev",
+    "build": "pnpm run build --filter code",
+    "preview": "pnpm run preview --filter code",
+    "test": "pnpm run test --filter test-case",
+    "test:run": "pnpm run test:run --filter test-case"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Winter22SOFE2720/online-shopping-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Winter22SOFE2720/online-shopping-system/issues"
+  },
+  "homepage": "https://github.com/Winter22SOFE2720/online-shopping-system#readme",
+  "devDependencies": {
+    "pnpm": "^6.32.4"
+  }
+}

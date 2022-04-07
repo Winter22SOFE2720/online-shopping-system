@@ -16,18 +16,27 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x, 17.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v3
-#       with: 
-#        path: "./Test Case/getting-started-with-jest"
+          
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        # cache: 'npm'
-        # cache-dependency-path: "'./Test Case/getting-started-with-jest/package-lock.json'"
-#     - run: cd "./Test Case/getting-started-with-jest"
-    - run: cd "./Test Case/getting-started-with-jest" && npm i && npm run build --if-present && npm test
+    
+    - name: Cache pnpm modules
+      uses: actions/cache@v2
+      with:
+        path: ~/.pnpm-store
+        key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-
+
+    - uses: pnpm/action-setup@v2.1.0
+      with:
+        run_install: true
+        
+    - run: pnpm test:run

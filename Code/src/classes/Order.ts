@@ -2,9 +2,12 @@ import PaymentDetails from "./PaymentDetails";
 import ShoppingCart from "./ShoppingCart";
 
 /** 
- * This should be the `Payment` class, but the `Order` class sounded better, so I renamed it
+ * The Order class holds the {@link PaymentDetails payment details} and the {@link ShoppingCart shopping cart items} of shoppers. 
+ * The order data is sent to order fulfilment team, where the logistics are carried out, an expected delivery date is given and the order is fulfilled.  
  * 
- * @author @okikio_school (Okiki Ojo)
+ * _**Note**: This class should be called the `Payment` class, but the `Order` class sounded better, so I renamed it._
+ * 
+ * @author Okiki Ojo
  * @date April 5, 2022
  */
 export class Order {
@@ -12,7 +15,7 @@ export class Order {
         private paymentDetails: PaymentDetails,
         private shoppingCart: ShoppingCart
     ) { }
-
+    
     public getPaymentDetails() {
         return this.paymentDetails;
     }

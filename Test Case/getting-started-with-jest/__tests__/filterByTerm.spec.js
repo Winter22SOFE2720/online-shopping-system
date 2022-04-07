@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 function filterByTerm(inputArr, searchTerm) {
     const regex = new RegExp(searchTerm, "i");
     return inputArr.filter(function (arrayElement) {
