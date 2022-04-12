@@ -6,6 +6,9 @@ import '../styles/home.css';
 // Component Imports
 import Navigation from "../components/Navigation.svelte";
 import ShoppingCart from "../components/ShoppingCart.svelte";
+import Content from "../components/Content.svelte";
+
+import { TextBlock, Button } from "fluent-svelte";
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -31,32 +34,42 @@ let title = 'My Astro Site';
 			color: var(--fds-text-primary);
 		}
 
-		main {
-			@apply grid h-full;
-			grid-template-columns: 1fr 2fr 325px;
+		.layout {
+			@apply px-4 pb-4;
+			@apply grid gap-6 h-full;
+			grid-template-columns: 225px auto 325px;
 		}
 	</style>
 </head>
 <body>
-	<main>
-		<div>
+	<div class="p-8 text-center">
+		<Button  variant="hyperlink">
+			<TextBlock variant="title">Online Shopping System</TextBlock>
+		</Button>
+	</div>
+	<div class="layout">
+		<div class="px-4">
 			<Navigation client:load />
 		</div>
-		<div></div>
-		<div class="overflow-scroll h-full">
+
+		<main class="pt-4">
+			<Content client:load />
+
+			<!--
+
+			You can also use imported framework components directly in your markup!
+			
+			Note: by default, these components are NOT interactive on the client.
+			The `:visible` directive tells Astro to make it interactive.
+			
+			See https://docs.astro.build/core-concepts/component-hydration/ 
+
+			-->
+		</main>
+
+		<div>
 			<ShoppingCart client:load />
 		</div>
-
-		<!--
-
-		You can also use imported framework components directly in your markup!
-		
-		Note: by default, these components are NOT interactive on the client.
-		The `:visible` directive tells Astro to make it interactive.
-		
-		See https://docs.astro.build/core-concepts/component-hydration/ 
-
-		-->
-	</main>
+	</div>
 </body>
 </html>

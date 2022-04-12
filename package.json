@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/Winter22SOFE2720/online-shopping-system#readme",
   "devDependencies": {
-    "pnpm": "^6.32.4"
+    "pnpm": "^6.32.6"
   }
 }

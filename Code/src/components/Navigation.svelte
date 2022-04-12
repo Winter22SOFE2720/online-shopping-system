@@ -1,32 +1,53 @@
 <script lang="ts">
-    import { TextBlock, ListItem } from "fluent-svelte";
+	import { onMount } from 'svelte';
+    import { TextBlock, ListItem, Checkbox } from "fluent-svelte";
+    import { Catagories, filterBy } from "./stores";
 
-	export let data = Array.from(Array(5), () => ({ title: "Title", href: "./hello" }));
+	export let data = Object.keys(Catagories);
 
-	
 	/** Specifies a custom class name for the NumberBox. */
 	let className = "";
 	export { className as class };
+
+    filterBy.set(Object.keys(Catagories));
+
+    let form;
+    let reset = () => {
+        let boxes = Array.from(form?.querySelectorAll(".checkboxes")) as HTMLInputElement[];
+        boxes.forEach(x => (x.checked = false));
+        filterBy.set(boxes.map(x => x?.id));
+        console.log(boxes.map(x => x?.id))
+    };
+
+    onMount(() => {
+        form?.addEventListener("change", () => {
+            let boxes = Array.from(form?.querySelectorAll(".checkboxes")) as HTMLInputElement[];
+            let filter = boxes.filter(x => x?.checked);
+            filterBy.set((filter.length ? filter : boxes).map(x => x?.id));
+        });
+    });
 </script>
 
 <nav class="nav {className ?? ''}">
-	<TextBlock variant="subtitle">Navigation</TextBlock>
-	<ul class="nav-items">
-		{#each data as item}
-            <ListItem href={item?.href}>
-                <!-- https://github.com/microsoft/fluentui-system-icons -->
-                <svg slot="icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M7.85355 0.146447C7.65829 -0.0488155 7.34171 -0.0488155 7.14645 0.146447C6.95118 0.341709 6.95118 0.658291 7.14645 0.853553L8.29603 2.00314C4.80056 2.11088 2 4.97839 2 8.5C2 12.0899 4.91015 15 8.5 15C12.0899 15 15 12.0899 15 8.5C15 8.48656 15 8.47313 14.9999 8.45971C14.9983 8.2001 14.7805 8 14.5209 8H14.4782C14.2093 8 14 8.23107 14 8.5C14 11.5376 11.5376 14 8.5 14C5.46243 14 3 11.5376 3 8.5C3 5.53311 5.34917 3.11491 8.28892 3.00398L7.14645 4.14645C6.95118 4.34171 6.95118 4.65829 7.14645 4.85355C7.34171 5.04882 7.65829 5.04882 7.85355 4.85355L9.85355 2.85355C10.0488 2.65829 10.0488 2.34171 9.85355 2.14645L7.85355 0.146447ZM11.8536 6.14645C12.0488 6.34171 12.0488 6.65829 11.8536 6.85355L8.85355 9.85355C8.65829 10.0488 8.34171 10.0488 8.14645 9.85355L6.64645 8.35355C6.45118 8.15829 6.45118 7.84171 6.64645 7.64645C6.84171 7.45118 7.15829 7.45118 7.35355 7.64645L8.5 8.79289L11.1464 6.14645C11.3417 5.95118 11.6583 5.95118 11.8536 6.14645Z"
-                        fill="currentColor"
-                    />
-                </svg>
-                {item?.title}
+    <div class="px-4 pb-16">
+        <TextBlock variant="subtitle">Filter</TextBlock>
+    </div>
+	<form class="nav-items" bind:this={form}>
+		{#each data as name}
+            <ListItem>
+                <Checkbox class="checkboxes" id={name} slot="icon">
+                    {name}
+                </Checkbox>
             </ListItem>
 		{/each}
-	</ul>
+        <ListItem on:click={reset}>
+            Reset Filter
+        </ListItem>
+	</form>
 </nav>
 
 <style lang="scss">
-    
+    nav {
+        @apply sticky pt-4 top-0 left-0 w-full;
+    }
 </style>
