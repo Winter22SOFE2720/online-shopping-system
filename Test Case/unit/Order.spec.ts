@@ -13,23 +13,15 @@ describe("Order class", () => {
         newShoppingCart
     );
 
-    it("getPaymentDetails()", () => {
+    it("getPaymentDetails()", async () => {
         expect(newOrder.getPaymentDetails()).toBeInstanceOf(PaymentDetails);
         expect(newOrder.getPaymentDetails()).eql(newPaymentDetails);
 
-        // expect(newOrder.getPaymentDetails().getProducts()).to.be.empty;
+        let BankVerification = await newOrder
+            .getPaymentDetails()
+            .VerifyPaymentInformation();
 
-        // let pizza = new Product("Pizza", "Italian Pizza", 5.00);
-        // newPaymentDetails.addItem(pizza);
-
-        // expect(newOrder.getPaymentDetails().getProducts()).to.not.be.empty;
-        // expect(newOrder.getPaymentDetails().getProducts().has(pizza)).to.be.eql(true);
-
-        // newOrder.getPaymentDetails().getProducts().delete(pizza);
-
-        // expect(newPaymentDetails.getProducts()).to.be.empty;
-        // expect(newPaymentDetails.getProducts().has(pizza)).to.not.be.eql(true);
-
+        expect(BankVerification).to.be.false;
     });
 
     it("getShoppingCart()", () => {
@@ -38,7 +30,7 @@ describe("Order class", () => {
 
         expect(newOrder.getShoppingCart().getProducts()).to.be.empty;
 
-        let pizza = new Product("Pizza", "Italian Pizza", 5.00);
+        let pizza = new Product("Pizza", "Italian Pizza", 5.00, { src: "./but-its-pizza.jpg", alt: "The Pizza Delight" });
         newShoppingCart.addItem(pizza);
 
         expect(newOrder.getShoppingCart().getProducts()).to.not.be.empty;

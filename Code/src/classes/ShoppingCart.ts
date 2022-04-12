@@ -14,6 +14,10 @@ export class ShoppingCart {
         return this.products;
     }
 
+    public getItem(index: number) {
+        return Array.from(this.products)[index];
+    }
+
     public addItem(item: Product) {
         this.products.add(item);
         return this;

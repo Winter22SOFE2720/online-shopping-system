@@ -11,7 +11,10 @@ describe("Product class", () => {
         "Pizza is a delicious food that people enjoy to eat.", 
 
         // Cost ($5.00)
-        5.00
+        5.00,
+
+        // Imaage
+        { src: "./image.jpg", alt: "Description of Image" }
     );
 
     it("constructor()", () => {
@@ -24,10 +27,10 @@ describe("Product class", () => {
         }
     });
 
-    it("constructor(undefined, '', -5.00)", () => {
+    it("constructor(undefined, '', -5.00, {})", () => {
         try {
             // @ts-ignore
-            let product = new Product(undefined, "", -5.00);
+            let product = new Product(undefined, "", -5.00, {});
         } catch (e) { 
             expect(e).to.instanceOf(TypeError);
             expect(e.message).to.equal("Product must have a name and it must be a non-empty string.");
@@ -35,7 +38,7 @@ describe("Product class", () => {
 
         try {
             // @ts-ignore
-            let product = new Product("", "", -5.00);
+            let product = new Product("", "", -5.00, {});
         } catch (e) { 
             expect(e).to.instanceOf(TypeError);
             expect(e.message).to.equal("Product must have a name and it must be a non-empty string.");
@@ -43,7 +46,7 @@ describe("Product class", () => {
 
         try {
             // @ts-ignore
-            let product = new Product("name", "", -5.00);
+            let product = new Product("name", "", -5.00, { src: "./sdf.jpg" });
         } catch (e) { 
             expect(e).to.instanceOf(TypeError);
             expect(e.message).to.equal("Product must have a description about it and it must be a non-empty string.");
@@ -61,14 +64,14 @@ describe("Product class", () => {
         expect(item.getQuantity()).to.eq(1);
     });
 
-    it("setQuantity()", () => {
-        let result = item.setQuantity(5);
+    it("updateQuantity()", () => {
+        let result = item.updateQuantity(5);
         expect(item.getQuantity()).to.eq(5);
         expect(result).to.be.instanceOf(Product);
     });
 
-    it("setQuantity(-5)", () => {
-        let result = item.setQuantity(-5);
+    it("updateQuantity(-5)", () => {
+        let result = item.updateQuantity(-5);
         expect(item.getQuantity()).to.eq(0);
         expect(result).to.be.instanceOf(Product);
     });
@@ -95,5 +98,20 @@ describe("Product class", () => {
 
     it("getDetails()", () => {
         expect(item.getDetails()).to.eq("Pizza is a delicious food that people enjoy to eat.");
+    });
+
+    it("setDetails()", () => {
+        item.setDetails("Cheese Pizza with extra Cheese.");
+        expect(item.getDetails()).to.eq("Cheese Pizza with extra Cheese.");
+    });
+
+    it("getImage()", () => {
+        expect(item.getImage()).toEqual({ src: "./image.jpg", alt: "Description of Image" });
+    });
+
+    it("setImage({ ... })", () => {
+        let img = { src: "./italian-pizza.jpg", alt: "The true pizza" };
+        item.setImage(img);
+        expect(item.getImage()).toEqual(img);
     });
 });

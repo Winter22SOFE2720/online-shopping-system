@@ -5,7 +5,7 @@ import Product from "../../Code/src/classes/Product";
 
 describe("ShoppingCart class", () => {
     const newShoppingCart = new ShoppingCart();
-    const item = new Product("Pizza", "Description is ...", 5);
+    const item = new Product("Pizza", "Description is ...", 5, { src: "./image.jpg" });
 
     it("getProducts()", () => {
         let products = newShoppingCart.getProducts();
@@ -19,6 +19,11 @@ describe("ShoppingCart class", () => {
 
         let products = newShoppingCart.getProducts();
         expect(products.size).to.equal(1);
+    });
+
+    it("getItem()", () => {
+        let _item = newShoppingCart.getItem(0);
+        expect(_item).to.be.equal(item);
     });
 
     it("removeItem()", () => {
