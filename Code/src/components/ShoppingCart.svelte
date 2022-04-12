@@ -4,7 +4,7 @@
 
 	import { paymentDetails, productsList, writable } from "./stores";
 
-	let checkout = true;
+	let checkout = false;
 	let shipping, billing, cardnum, date, cvv, pincode;
 	$: paymentInfo = `${cardnum} -- ${cvv} -- ${date} -- ${pincode}`;
 
