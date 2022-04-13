@@ -39,5 +39,3 @@ This project was made to practice common software engineering practices such as 
 
 # Team Assesment Report
 [/Team Assesment Report](/Team%20Assesment%20Report)
-  - Team Assesment Report
-    - [Report](/Team%20Assesment%20Report/Tabular%20List%20of%20Requirements.pdf)
