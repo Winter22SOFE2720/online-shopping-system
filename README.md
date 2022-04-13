@@ -2,6 +2,8 @@
 A simple online shopping system built using fluent-svelte.
 This project was made to practice common software engineering practices such as requirements engineering and architecure design.
 
+### [Website Demo](https://fluent-shop.netlify.app/)
+
 ##### Table of Contents  
 
 # Project Code
