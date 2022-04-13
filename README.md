@@ -13,7 +13,7 @@ This project was made to practice common software engineering practices such as 
     - [Conceptual Model](/Design/Class%20model.pdf)
   - Sequence Diagrams
     - [Shopping Cart](/Design/Cart-Management-Sequence-Diagram.pdf)
-    - [Class-Based](/Design/Class-Based-Sequence-Diagram.pdf)
+    - [Class-Based](/Design/Sequence%20Diagram%20Complete.pdf)
 
 # Project Requirements
 [/Requirements](/Requirements)
