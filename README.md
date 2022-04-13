@@ -29,6 +29,8 @@ This project was made to practice common software engineering practices such as 
 
 # Project Use Cases
 [/Use Cases](/Use%20Cases)
+  - Requirements
+    - [Tabular list of Requirements & Description](/Requirements/Tabular%20List%20of%20Requirements.pdf)
   -Use Case Diagram
     -[Use Case](/Use%20Cases/Requirement%20Report.pdf)
   -Use Case Descriptions
