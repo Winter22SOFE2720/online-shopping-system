@@ -22,7 +22,11 @@ This project was made to practice common software engineering practices such as 
 
 # Project Requirements
 [/Requirements](/Requirements)
-
+  - Requirements
+    - [Tabular list of Requirements & Description]( )
+    - [Requirements Diagram]( )
+  - Requirements Report
+    - [Requirements Report](/Design/Requirement%20Report.pdf)
 # Project Test Cases
 [/Test Cases](/Test%20Case)
 
