@@ -30,7 +30,7 @@ This project was made to practice common software engineering practices such as 
 # Project Use Cases
 [/Use Cases](/Use%20Cases)
   - Use Case Diagram
-    - [Diagram](/Use%20Cases/Requirement%20Report.pdf)
+    - [Diagram](/Use%20Cases/Requirement20%Diagram20%+20%Use20%Case1.jpg)
   - Use Case Descriptions
     - [Descriptions](/Use%20Cases/Requirement%20Report.pdf)
 
