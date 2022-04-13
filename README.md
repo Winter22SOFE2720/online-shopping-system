@@ -17,6 +17,9 @@ This project was made to practice common software engineering practices such as 
     - [Class-Based](/Design/Sequence%20Diagram%20Final1.jpg)
   - State Diagram
     - [Online Shopping Site](/Design/State%20Diagram%20-%20Payment.jpg)
+  - Design Report
+    - [Design Report](/Design/Sequence%20Diagram%20Final1.jpg)
+
 # Project Requirements
 [/Requirements](/Requirements)
 
@@ -25,3 +28,5 @@ This project was made to practice common software engineering practices such as 
 
 # Project Use Cases
 [/Use Cases](/Use%20Cases)
+
+
