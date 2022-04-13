@@ -27,10 +27,10 @@ This project was made to practice common software engineering practices such as 
     - [Requirements Diagram]( )
   - Requirements Report
     - [Requirements Report](/Requirements/Requirement%20Report.pdf)
-# Project Test Cases
-[/Test Cases](/Test%20Case)
 
 # Project Use Cases
 [/Use Cases](/Use%20Cases)
 
+# Project Test Cases
+[/Test Cases](/Test%20Case)
 
