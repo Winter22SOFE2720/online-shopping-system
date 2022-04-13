@@ -39,3 +39,5 @@ This project was made to practice common software engineering practices such as 
 
 # Team Assesment Report
 [/Team Assessment Report](/Team%20Assessment%20Report)
+  - Team Assessment Report
+    - [Report](/Team%20Assessment%20Report/Team%20Assessment%20Report.jpg)
