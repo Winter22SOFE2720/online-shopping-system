@@ -32,7 +32,7 @@ This project was made to practice common software engineering practices such as 
   - Use Case Diagram
     - [Diagram](/Use%20Cases/Requirement%20Diagram%20and%20Use%20Case1.jpg)
   - Use Case Descriptions
-    - [Descriptions](/Use%20Cases/)
+    - [Descriptions](/Use%20Cases/Use%20Case%20Description.pdf)
 
 # Project Test Cases
 [/Test Cases](/Test%20Case)
