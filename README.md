@@ -18,7 +18,7 @@ This project was made to practice common software engineering practices such as 
     - [Shopping Cart](/Design/SequenceDiagram.jpg)
     - [Class Based](/Design/Sequence%20Diagram%20Final1.jpg)
   - State Diagram
-    - [Online Shopping Site](/Design/State%20Diagram%20-%20Payment.jpg)
+    - [Online Shopping Site](/Design/StateDiagram.jpg)
   - Design Report
     - [Design Report](/Design/Design%20Review%20Report.pdf)
 
