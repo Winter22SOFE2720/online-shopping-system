@@ -38,6 +38,8 @@ This project was made to practice common software engineering practices such as 
 
 # Project Test Cases
 [/Test Cases](/Test%20Case)
+  - Acceptance Tests
+      - [Acceptance Test](/Test%20Case/Acceptance%20tests.pdf)
 
 # Team Assesment Report
 [/Team Assessment Report](/Team%20Assessment%20Report)
