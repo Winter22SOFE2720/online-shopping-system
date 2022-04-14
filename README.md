@@ -58,7 +58,9 @@ This project was made to practice common software engineering practices such as 
 ### Building & Testing
 
 > **(Optional)** You can use [Gitpod](https://gitpod.io) to build the project in an online environment,
+> 
 > [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Winter22SOFE2720/online-shopping-system)
+> 
 > If you use `Gitpod` then you can skip [#setting-up-environment](#setting-up-environment), and go right into [#building](#building) and [#testing](#testing).
 
 #### Setting up Environment
