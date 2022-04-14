@@ -41,6 +41,11 @@ This project was made to practice common software engineering practices such as 
   - Acceptance Tests
       - [Acceptance Test](/Test%20Case/Acceptance%20tests.pdf)
 
+# Traceability Matrix
+[/Traceability Matrix](/Traceability%20Matrix)
+  - Traceability Matrix
+    - [Traceability Matrix](/Traceability%20Matrix/Traceability%20Matrix.pdf)
+
 # Team Assesment Report
 [/Team Assessment Report](/Team%20Assessment%20Report)
   - Team Assessment Report
